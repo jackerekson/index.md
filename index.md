@@ -37,10 +37,10 @@ variableThree = ‘string 3’;
 
 https://www.developerdrive.com/top-10-must-follow-javascript-best-practices-2/
 
-8. Declare and initialize your variables at the top
-Nothing disrupts readability like a late declaration. Just as it’s easier to take out all your tools before starting a job, it’s simpler to declare all variables before getting into the nitty-gritty of your function. This gives easy access should we need to tweak any name or value later down the line.
+8. NEVER USE “SETTIMEOUT” AND “SETINTERVAL” AS ALTERNATIVES TO “EVAL”
 
-While on the topic of variables, it’s best practice to initialize your variables at the time of creation so you and your team can ensure none are left undefined.
+setTimeOut( “document.getID(‘value’)”, 3000);
+In above code document.getID(‘value’) is used as a string that is processed within the “setTimeOut” function. This is similar to “eval” function which executes a string during every execution of code thus degrading performance. Henceforth, it is suggested to pass a function within such functions:
 
 9. Declare and initialize your variables at the top
 Nothing disrupts readability like a late declaration. Just as it’s easier to take out all your tools before starting a job, it’s simpler to declare all variables before getting into the nitty-gritty of your function. This gives easy access should we need to tweak any name or value later down the line.
